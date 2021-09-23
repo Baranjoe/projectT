@@ -25,16 +25,18 @@ app.post("/", function(req, res){
 
   https.get(url, function(response){
     console.log(response.statusCode);
+    console.log(url);
 
     response.on("data", function(data) {
-      const newsData = JSON.parse(data);
-
-      for (var i = 0; i < 20; i++) {
-        res.write("Source: " + newsData.articles[0].source.name);
-        res.write("<hr>");
+      // const newsData = JSON.parse(data);
+      //
+      // for (var i = 0; i < 20; i++) {
+      //   res.write("Source: " + newsData.articles[0].source.name);
+      //   res.write("<hr>");
+      //   res.send();
       }
 
-      res.send();  
+      res.send();
 
     });
   });
