@@ -40,7 +40,10 @@ https.get(url, function(response) {
       return console.log('Invalid Status Code Returned:', response.statusCode);
     }
 
-    console.log(body); // Here is the response body
+    const newsData = JSON.parse(body);
+    console.log(newsData.articles[0].source.name);
+
+    // console.log(body); // Here is the response body
 
   });
 
