@@ -42,7 +42,7 @@ https.get(url, function(response) {
     }
 
     for (var i = 0; i < 20; i++) {
-      res.write("<h1>Source: " + newsData.articles[i].source.name+"</h1>");
+      res.write("<div><h1>"+newsData.articles[i].title+"</h1><p>Source:" + newsData.articles[i].source.name+"</p></div>");
       }
 
     res.send();
