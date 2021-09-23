@@ -30,18 +30,24 @@ https.get(url, function(response) {
   console.log(url);
 
   request(url, function(error, response, body) {
-    //Check for error
+
+    const newsData = JSON.parse(body);
+
     if (error) {
       return console.log('Error:', error);
     }
 
-    //Check for right status code
     if (response.statusCode !== 200) {
       return console.log('Invalid Status Code Returned:', response.statusCode);
     }
 
-    const newsData = JSON.parse(body);
-    console.log(newsData.articles[0].source.name);
+    for (var i = 0; i < 20; i++) {
+      res.write("Source: " + newsData.articles[i].source.name);
+      res.write("<hr>");
+      res.send();
+    }
+
+    res.send(newsData);
 
     // console.log(body); // Here is the response body
 
