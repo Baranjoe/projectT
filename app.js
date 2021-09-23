@@ -44,10 +44,9 @@ https.get(url, function(response) {
     for (var i = 0; i < 20; i++) {
       res.write("Source: " + newsData.articles[i].source.name);
       res.write("<hr>");
-      res.send();
-    }
+      }
 
-    res.send(newsData);
+    res.send();
 
     // console.log(body); // Here is the response body
 
