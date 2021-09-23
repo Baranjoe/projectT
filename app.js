@@ -34,9 +34,10 @@ app.post("/", function(req, res){
       //   res.write("Source: " + newsData.articles[0].source.name);
       //   res.write("<hr>");
       //   res.send();
-      }
 
       res.send();
+
+    // });
 
     });
   });
