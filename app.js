@@ -58,7 +58,7 @@ https.get(url, function(response) {
 
 });
 });
-});
+// });
 
 // API KEY
 // e64e32714b864219825539534c377a76
